@@ -1,0 +1,17 @@
+Condition 
+
+Runs mshta with javascript arguments
+
+	[CreateProcess] = 1 AND
+	[FileName_Target] = N'MSHTA.EXE' AND
+	[LaunchArguments_Target] LIKE N'%javascript:%'
+  
+  Example
+  
+  "C:\Windows\system32\mshta.exe" javascript:o9WTewk8="z76";AB67=new%20ActiveXObject("WScript.Shell");
+  vOah2S="CiY8ZIgc";H47HXL=AB67.RegRead("HKCU\\software\\T8VKiFzOE\\uhCzSqkC6w");
+  nuPJe0z="Ns";eval(H47HXL);wINYD5K="OH";
+  
+  App.any.run
+  
+  https://app.any.run/tasks/db2a8c82-84a0-41e0-84fb-0401a6f8c0e4
