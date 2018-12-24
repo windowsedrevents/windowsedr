@@ -1,0 +1,8 @@
+Enables login bypass
+
+    [LaunchArguments_Target] LIKE '%sethc.exe%' OR
+		[[LaunchArguments_Target] LIKE '%magnify.exe%' OR
+		[LaunchArguments_Target] LIKE '%narrator.exe%' OR
+		[LaunchArguments_Target] LIKE '%osk.exe%' OR
+		[LaunchArguments_Target] LIKE '%utilman.exe%' OR
+		[[LaunchArguments_Target] LIKE '%displayswitch.exe%'
