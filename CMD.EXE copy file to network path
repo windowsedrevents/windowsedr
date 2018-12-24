@@ -1,0 +1,11 @@
+CMD.EXE copy file to network path
+
+	[FileName] = 'CMD.EXE' AND
+	(
+		[BehaviorFileRenameToExecutable] = 1 OR
+		[BehaviorFileWriteExecutable] = 1 
+	) AND 
+	(
+		[Path_Target] LIKE '\\%\%' OR
+		[Path_Target] LIKE 'UNC%\%'
+	)
