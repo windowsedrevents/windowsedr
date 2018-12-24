@@ -1,0 +1,13 @@
+Clears security event log
+
+(
+		[FileName_Target] = N'WEVTUTIL.EXE' AND -- Clear event log
+		(
+			[LaunchArguments_Target] LIKE N'% cl %Security%' OR
+			[LaunchArguments_Target] LIKE N'% clear-log %Security%'
+		) 
+	) OR
+	(
+		[FileName_Target] = N'WMIC.EXE' AND -- Clear event log
+		[LaunchArguments_Target] LIKE N'% ClearEventLog%Security%'
+	)
