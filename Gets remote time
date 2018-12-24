@@ -1,0 +1,6 @@
+Gets remote time
+
+  [BehaviorProcessCreateProcess] = 1 AND
+	[FileName_Target] = 'NET.EXE' AND
+	[LaunchArguments_Target] LIKE '%TIME %\\%' AND 
+	[LaunchArguments_Target] NOT LIKE '%/SET%'
