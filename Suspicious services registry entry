@@ -1,0 +1,4 @@
+Suspicious services registry entry
+
+	[Path] LIKE N'SYSTEM\%\Services\%@ImagePath' OR
+	[Path] LIKE N'SYSTEM\%\Services\%@ServiceDll'
