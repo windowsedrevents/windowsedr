@@ -1,0 +1,8 @@
+Login bypass configured
+
+    [Path] LIKE '%Image File Execution Options\sethc.exe @Debugger' OR
+		[Path] LIKE '%Image File Execution Options\magnify.exe @Debugger' OR
+		[Path] LIKE '%Image File Execution Options\narrator.exe @Debugger' OR
+	  [Path] LIKE '%Image File Execution Options\osk.exe @Debugger' OR
+		[Path] LIKE '%Image File Execution Options\utilman.exe @Debugger' OR
+		[Path] LIKE '%Image File Execution Options\displayswitch.exe @Debugger'
