@@ -1,0 +1,8 @@
+Unsigned writes executable to important Windows directory
+
+[Path_Target]) LIKE REVERSE(N'_:\WINDOWS\') OR
+[Path_Target]) LIKE REVERSE(N'_:\WINDOWS\SYSTEM32\') OR
+[Path_Target]) LIKE REVERSE(N'_:\WINDOWS\SYSTEM32\DRIVERS\') OR
+[Path_Target]) LIKE REVERSE(N'_:\WINNT\') OR
+[Path_Target]) LIKE REVERSE(N'_:\WINNT\SYSTEM32\') OR
+[Path_Target]) LIKE REVERSE(N'_:\WINNT\SYSTEM32\DRIVERS\')
