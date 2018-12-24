@@ -1,0 +1,5 @@
+Starts remote service
+
+[BehaviorProcessCreateProcess] = 1 AND
+[FileName_Target] = 'SC.EXE' AND 
+[LaunchArguments_Target] LIKE '%\\% start %'
