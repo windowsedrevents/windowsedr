@@ -1,0 +1,4 @@
+Runs from RecyleBin directory
+
+[Path] LIKE N'_:\$RECYCLE.BIN\%' OR
+[Path] LIKE N'_:\RECYCLER\%'
