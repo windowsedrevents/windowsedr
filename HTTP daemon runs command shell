@@ -1,0 +1,10 @@
+HTTP daemon runs command shell
+
+	[BehaviorProcessCreateProcess] = 1 AND
+	(
+		[FileName] = 'W3WP.EXE' OR
+		[FileName] = 'HTTPD.EXE' OR
+		[FileName] LIKE 'COLDFUSION%.EXE' OR
+		[FileName] LIKE 'TOMCAT%.EXE'
+	) AND
+	[FileName_Target] = 'CMD.EXE' 
