@@ -1,0 +1,5 @@
+Runs rundll32 with javascript arguments
+
+	[BehaviorProcessCreateProcess] = 1 AND
+	[FileName_Target] = N'RUNDLL32.EXE' AND
+	[LaunchArguments_Target] LIKE N'%javascript:%'
