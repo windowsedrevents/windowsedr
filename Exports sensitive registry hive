@@ -1,0 +1,5 @@
+Exports sensitive registry hive
+
+    [LaunchArguments_Target] LIKE '%SAVE%HKLM\SYSTEM %' OR
+		[LaunchArguments_Target] LIKE '%SAVE%HKLM\SAM %' OR
+	  [LaunchArguments_Target] LIKE '%SAVE%HKLM\SECURITY %'  
