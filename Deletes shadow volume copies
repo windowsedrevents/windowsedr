@@ -1,0 +1,11 @@
+Deletes shadow volume copies
+
+	  (
+			[FileName_Target] = N'VSSADMIN.EXE' AND
+			[LaunchArguments_Target] LIKE N'%/delete%shadows%/all%/quiet%'
+		) OR
+		(
+			[FileName_Target] = N'WMIC.EXE' AND
+			[LaunchArguments_Target] LIKE N'%shadowcopy%delete%'
+		)
+	
