@@ -1,8 +1,0 @@
-Enables RDP
-
-[BehaviorProcessCreateProcess] = 1 AND
-[FileName_Target] = 'REG.EXE' AND 
-	(
-		[LaunchArguments_Target] LIKE '%ADD%\Control\Terminal Server%fDenyTSConnections%/d%0%' OR
-		[LaunchArguments_Target] LIKE '%ADD%\Control\Terminal Server\WinStations\RDP-Tcp%UserAuthentication%/d%'
-	)
