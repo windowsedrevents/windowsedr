@@ -1,0 +1,5 @@
+Impersonates accessibility application
+
+     [Description] = 'Windows Command Processor' OR
+		 [Description] = 'Windows Explorer' OR
+		 [Description] = 'Windows Task Manager' 
