@@ -1,0 +1,21 @@
+SELECT mn.MachineName, sfn.FileName,se.FileName_Target,se.EventUTCTime,se.LaunchArguments_Target,se.Path_Target
+	
+FROM
+
+	dbo.WinTrackingEvents_P0 AS se with(nolock)
+
+	INNER join dbo.MachineModulePaths as mp with (nolock) on (mp.PK_MachineModulePaths = se.FK_MachineModulePaths)
+	inner join dbo.FileNames as sfn with (nolock) on (sfn.PK_FileNames = mp.FK_FileNames)
+	inner join dbo.Machines as mn with (nolock) on mn.PK_Machines = se.FK_Machines
+	INNEr join dbo.LaunchArguments as sla with (nolock) on sla.PK_LaunchArguments = se.FK_LaunchArguments__SourceCommandLine
+	
+WHERE
+	
+	[se].[BehaviorProcessCreateProcess] = 1 AND
+	sfn.FileName IN ('EXCEL.EXE') AND
+	se.FileName_Target in ('schtasks.exe')
+  
+  
+  Reference :
+  
+  https://www.hybrid-analysis.com/sample/b409538c99f99b94a5035d9fa44a506b41be0feb23e89b7e4d272ba791aa6002?environmentId=100
