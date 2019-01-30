@@ -1,0 +1,23 @@
+		--	se.EventUTCTime >= DATEADD(DAY, -2, GETUTCDATE()) AND 
+
+			[].[BehaviorProcessCreateProcess] = 1 AND
+			.EventUTCTime >= DATEADD(DAY, -10, GETUTCDATE()) AND 
+
+			.[FileName] IN ('WINWORD.EXE','EXCEL.EXE','POWERPNT.EXE') AND
+		--	.[FileName] IN ('WINWORD.EXE','EXCEL.EXE','POWERPNT.EXE','MSPUB.exe','VISIO.exe','OUTLOOK.EXE') AND
+
+		(
+			--[se].[FileName_Target] IN ('cmd.exe','WSCRIPT.EXE','CSCRIPT.EXE','powershell.exe','regsvr32.exe','wmic.exe','mshta.exe','rundll32.exe','msiexec.exe','hh.exe')
+			--[se].[FileName_Target] IN ('cmd.exe') 
+			--[se].[FileName_Target] IN ('WSCRIPT.EXE')
+			--[se].[FileName_Target] IN ('CSCRIPT.EXE')
+			--[se].[FileName_Target] IN ('powershell.exe')
+			--[se].[FileName_Target] IN ('regsvr32.exe')
+			--[se].[FileName_Target] IN ('wmic.exe')
+			--[se].[FileName_Target] IN ('mshta.exe') 
+			--[se].[FileName_Target] IN ('rundll32.exe')
+			--[se].[FileName_Target] IN ('msiexec.exe')
+			--[se].[FileName_Target] IN ('hh.exee')
+			--[se].[FileName_Target] IN ('schtasks.exe')
+			--[se].[FileName_Target] IN ('EQNEDT32.EXE')
+			  [se].[FileName_Target] IN ('wab.exe')
