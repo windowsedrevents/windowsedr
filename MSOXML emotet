@@ -14,3 +14,34 @@ OPTION (RECOMPILE);
 
 
 Reference: https://app.any.run/tasks/9740e7c2-0500-4e72-a5e3-c1de29057e61
+
+
+SELECT mn.MachineName, se.FileName_Target, se.Path_Target, se.LaunchArguments_Target
+	
+FROM
+	--[dbo].[WinTrackingEventsCache] AS [se] WITH(NOLOCK)
+	dbo.WinTrackingEvents_P0 AS se with(nolock)
+
+	INNER join dbo.MachineModulePaths as mp with (nolock) on (mp.PK_MachineModulePaths = se.FK_MachineModulePaths)
+	inner join dbo.FileNames as sfn with (nolock) on (sfn.PK_FileNames = mp.FK_FileNames)
+	inner join dbo.Machines as mn with (nolock) on mn.PK_Machines = se.FK_Machines
+	INNEr join dbo.LaunchArguments as sla with (nolock) on sla.PK_LaunchArguments = se.FK_LaunchArguments__SourceCommandLine
+	
+	
+WHERE 
+	--[se].[BehaviorProcessCreateProcess] = 1 AND
+	--[se].[FileName_Target] = 'bitsadmin.exe' AND
+	--[se].[LaunchArguments_Target] LIKE '%/TRANSFER%'
+
+	
+--When the Parent Image launches WINWORD.exe file with .xml /o/u parameter
+[se].[BehaviorProcessCreateProcess] = 1 AND
+			se.EventUTCTime >= DATEADD(DAY, -34, GETUTCDATE()) AND 
+
+			[sfn].[FileName] IN ('MSOXMLED.EXE') AND
+			(
+					[se].[FileName_Target] IN ('WINWORD.EXE')  AND
+					se.LaunchArguments_Target like '%.xml" /o "u"'
+			)	
+order by se.EventUTCTime desc
+OPTION (RECOMPILE);
