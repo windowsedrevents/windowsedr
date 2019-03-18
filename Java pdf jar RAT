@@ -1,0 +1,31 @@
+select mn.MachineName , se.EventUTCTime, sfn.FileName, se.FileName_Target, se.Path_Target, se.LaunchArguments_Target, sla.LaunchArguments as 'Source Command Line'
+
+FROM
+
+dbo.WinTrackingEvents_P0 as se
+
+
+inner join dbo.MachineModulePaths as mp with (nolock) on (mp.PK_MachineModulePaths = se.FK_MachineModulePaths)
+
+inner join dbo.FileNames as sfn with (nolock) on (sfn.PK_FileNames = mp.FK_FileNames)
+
+inner join dbo.Machines as mn with (nolock) on mn.PK_Machines = se.FK_Machines
+
+inner join dbo.LaunchArguments as sla with (nolock) on sla.PK_LaunchArguments = se.FK_LaunchArguments__SourceCommandLine
+
+where 
+
+
+sfn.FileName = 'javaw.exe' AND
+(se.FileName_Target = 'reg.exe' OR se.FileName_Target = 'icacls.exe')
+
+AND
+
+(
+
+sla.LaunchArguments like '%pdf.jar%'
+
+)
+
+
+Reference : https://app.any.run/tasks/45e4d27a-b88f-4c29-8a53-733f5e769893
