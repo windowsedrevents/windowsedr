@@ -1,0 +1,708 @@
+ Command Shell or Powershell Has been Launched From a Remote System
+ Unusual Process (ex: word, iexplore, AcroRd..) Launched a Command Shell
+ Whoami /groups Has Been Executed
+ Childless Process Launched/Spawned a Process
+ Command Shell Started With a System Privileges
+ Detected A Known Process Started With A New Unseen Hash
+ Detected a New Unseen Process Started with a System User Privileges
+ Detected a Possible Keylogger
+ Detected a Registry Dump For SAM or System Key
+ Detected a Remotely Executed Process over Multiple Hosts
+ Detected a Scheduled Task over Multiple Hosts (can fall back to 4698)
+ Detected a Suspicious Svchost Process (missing -k)
+ Detected Abnormal Parent for a Process
+ Detected An Unknown / Unseen Process (Based On The Process Hash)
+ Detected An Unknown / Unseen Process (Based On The Process Name)
+ Detected Excessive Execution of SC Command
+ Detected Excessive Usage of System Tools From a Single Machine
+ Detected Mimikatz Based on IMP Hash (check IMP Hash config on sysmonconfig)
+ Detected PsExec with a Different Process Name (IMPHash)
+ Shadow Copies Delete Detected
+ System Process Started From Unusual Directory
+ Possible Locky Ransomware detected based on rundll32 with qwerty argument
+ Powershell Has Been Launched
+ PsExec Has Been Detected
+ PsExec Has Been Launched From a Compromised Host
+ Powershell Has Been Launched in a Compromised Host
+ Powershell Malicious Usage Detected
+ Powershell Malicious Usage Detected with Encoded Command
+ Powershell Script File Has Been Downloaded
+ Process Baselining: Process Hash
+ Process Baselining: Process Name
+ Process Baselining: Process Name to Hash
+ Process Baselining: Process Name to Parent Process
+ Process Baselining: Process Started with a System User Privileges
+ Process Launched From a Shared Folder
+ Process Launched From Temp Directory
+ Process Started from Unusual Directories (Recycle.bin, ..)
+ Process Loaded Executable from Temp Directory
+ Unsigned Executable Loaded Into lsass.exe
+ Unsigned Executable Loaded Into Sensitive System Process
+ Process Created a Thread From a Process That was Launched From a Temp Directory
+ Process Created a Thread Into Another Process
+ Process Created a Thread into lsass Process
+ Process Created a Thread into System Process
+ Process Launched From a Shared Folder and Created Thread into Another Process
+ Service Binary Path Has Been Updated Followed by a CreateRemoteThread Detected From the Same Process (sysmon-13)
+ Service Binary Path Has Been Updated Followed by a Network Connection From the Same Process
+ Detected SMB Traffic From a Compromised Host
+ Excessive Denied SMB Traffic From a Compromised Host
+ Hidden Network Share Has Been Added
+ A Network Share Has Been Added In a Compromised Host
+ Network Share Has Been Accessed From a Compromised Host
+ Administrative share Has Been Accessed
+ Administrative share Has Been Accessed From a Compromised Machine
+ Excessive Failed Attempts to Access a Network Shared Resource From a Compromised Host
+ Excessive Failed Attempts to Access an Administrative Share From a Single source
+ Malicious Service Has Been Installed in a System
+ Detected a Service Configured to Use a Pipe
+ A Pipe Has Been Created Followed by Updating Service Binary Path to Connect to The Created Pipe
+ Detected a Fileless UAC Bypass using Fodhelper (13)
+ Detected a Fileless UAC Bypass using sdclt (13)
+ Detected a Fileless UAC Bypass using Windows Event Viewer (13)
+ Detected a Long Value in Windows Registry
+ Detected a Service Binary Path Changed followed by a User or Group Added
+ Detected a Service Configured to Use Powershell
+ Detected a Service with an Executable Binary Located in a Shared Folder
+ Detected an Unquoted Service Binary Path with Spaces
+ Detected a Successful Login From a Compromised Host
+ Detected a Remoting Service Connected to Lsass Pipe
+ Lsass Process Connected to a Pipe
+ Detected a Malicious Access to lsass Process
+ Detected a Malicious Access to lsass Process from Unknown Call Trace
+ Remoting Service Created a Powershell Script File
+ Scheduled Task Has Been Created in a Compromised Host
+ Possible UAC Bypass - A Scheduled Task Has Been Configured to Run With Highest Privileges
+ Service Has Been Installed in a Compromised Host
+ SAM Registry key - Enumerate sub-keys (users) (audit need to be configured for \REGISTRY\MACHINE\SAM\SAM\DOMAINS\Account\Users)
+ SAM Registry key Has Been Accessed - using regedit (\\REGISTRY\\MACHINE\\SAM)
+ Unsigned Driver Has Been Loaded Into Windows Kernel
+Antivirus disabled
+Autorun
+Autorun key contains non-printable characters
+Autorun unsigned Active Setup
+Autorun unsigned AppInit_DLLs
+Autorun unsigned BHO
+Autorun unsigned DLL loaded in more than 10 processes
+Autorun unsigned hidden
+Autorun unsigned IE toolbar
+Autorun unsigned in AppDataLocal directory
+Autorun unsigned in AppDataRoaming directory
+Autorun unsigned in ProgramData directory
+Autorun unsigned in Temp directory
+Autorun unsigned LSA
+Autorun unsigned only executable in directory
+Autorun unsigned only executable in directory & File hidden
+Autorun unsigned only file in directory
+Autorun unsigned ServiceDLL
+Autorun unsigned suspicious DLL loaded in more than 2 processes
+Autorun unsigned uncommon registry startup method
+Autorun unsigned Winsock LSP
+Bad certificate warning disabled
+Beacon
+Blacklisted
+Blacklisted entry in hosts file
+Browser runs powershell
+Bytes sent ratio
+Clears security event log
+CMD.EXE copy file to network path
+Compiled in last 24 hours
+Compiled in last month
+Completes BITS download Job
+Configures port redirection
+Created during weekend
+Created in last 24 hours
+Created in last month
+Creates password-protected archive
+Creates process and creates remote thread on same file
+Creates remote process using wmic
+Creates remote service
+Creates shadow volume for logical drive
+Creates suspicious service running command shell
+Creation time near blacklisted creation time
+Creation time near graylisted creation time
+Custom: Bad certificate
+Custom: Bad domain
+Custom: Bad IP
+Custom: Bad module
+Deletes shadow volume copies
+Direct IP request from unsigned module
+Direct IP request from unsigned process
+Disables security service
+Disables startup repair
+DNS traffic from process
+Driver hooks disk miniport
+Driver hooks file system
+Driver hooks keyboard
+Driver hooks miniport
+Driver hooks network
+Duplicate section name
+Empty section name
+Enables cleartext credential storage
+Enables login bypass
+Enables RDP
+Enumerates domain administrators
+Enumerates domain computers
+Enumerates domain controllers
+Enumerates domain groups
+Enumerates IP configuration
+Enumerates network connections
+Enumerates processes
+Enumerates remote processes
+Enumerates system info
+Executable in ADS
+Executes from suspicious location
+Executes possibly obfuscated powershell command
+Executes powershell invoking environment variable
+Executes regsvr32 leveraging COM scriplets
+Executes regsvr32 without arguments
+Executes rundll32 without arguments
+Exports sensitive registry hive
+Failed to scan by OPSWAT
+File and directory hidden in AppData
+File encrypted
+File hidden
+Filename present once in environment
+Firewall disabled
+Floating code & hooking
+Floating code & network access
+Floating code & suspect thread
+Floating module
+Floating module & Hooking
+Floating module & Network access
+Floating module in browser process
+Floating module in OS process
+Floating module loaded in more than 3 processes
+Get hostname
+Gets remote time
+GINA replacement
+Graylisted
+Graylisted entry in hosts file
+Hidden & Beacon
+Hidden & Bytes sent ratio
+Hidden & Hooking
+Hidden in highly suspicious directory
+High connection count
+Hooking
+Hooks audio output function
+Hooks authentication function
+Hooks crypto function
+Hooks DnsQuery function
+Hooks GUI function
+Hooks network HTTP function
+Hooks network IO function
+Hooks NtLdr function
+Hooks registry access function
+Hooks registry enumeration function
+HostFile contains antivirus FQDN
+HostFile contains more than 1000 entries
+HTTP daemon creates executable
+HTTP daemon drops and executes file
+HTTP daemon runs command shell
+IE enhanced security disabled
+Image mismatch
+Impersonates accessibility application
+In AppData directory
+In encrypted directory
+In hidden directory
+In multiple directories on same machine
+In ProgramData directory
+In RecycleBin directory
+In root of AppDataLocal directory
+In root of AppDataRoaming directory
+In root of logical drive
+In root of Program directory
+In root of Users directory
+In same directory as blacklisted
+In same directory as graylisted
+In SystemVolumeInformation directory
+In temporary directory
+In uncommon directory
+Invalid kernel object type
+Invalid PE compile date
+Invalid signature
+Likely packed
+Limited User Account (LUA) disabled
+Login bypass configured
+Maps administrative share
+Maps IPC$ share
+MD5 Collision
+Misleading file extension
+Modifies bad certificate warning setting
+Modifies firewall policy
+Modifies internet zone setting
+Modifies LUA setting
+Modifies registry editor setting
+Modifies run key
+Modifies security center config
+Modifies services ImagePath
+Modifies task manager setting
+Modifies windows system policy
+Modifies zone crossing warning setting
+More than 5 execution redirect
+Mshta drops executable
+Mshta runs powershell
+Multiple names on same machine
+Network access
+Network listen
+No antivirus notification disabled
+No file description
+No firewall notification disabled
+Non-Microsoft & System attributes
+Notification registered
+Office application executes scripting engine
+Office application runs powershell
+Packed
+Perform manual DNS lookup
+Performs scripted file transfer
+Possible credential dumping
+Powershell creates remote thread
+Powershell possible credential dumping
+Process access denied
+Process accesses network
+Process authorized in firewall
+Rapidly reads multiple documents (30 documents within 30 seconds)
+Registry tools disabled
+Regsvr32 executes scripting engine
+Renames file to executable
+Reported infected by OPSWAT
+Reported infected by YARA
+Reported malicious by reputation service
+Reported suspicious by OPSWAT
+Reported suspicious by reputation service
+Revoked signature
+RSA Live: Bad domain
+RSA Live: Bad IP
+Rundll32 executes scripting engine
+Runs ACLs management tools
+Runs application compatibility management tool
+Runs command shell
+Runs file attributes modification tool
+Runs file transfer tool
+Runs from RecyleBin directory
+Runs from SystemVolumeInformation directory
+Runs mshta with javascript arguments
+Runs NET.EXE
+Runs network configuration tool
+Runs network connectivity tool
+Runs powershell
+Runs powershell bypassing execution policy
+Runs powershell decoding base64 string
+Runs powershell downloading content
+Runs powershell Invoke-Mimikatz function
+Runs powershell memory stream function
+Runs powershell ShellExecute function
+Runs powershell using encoded command
+Runs powershell with hidden window
+Runs powershell with long arguments
+Runs registry tool
+Runs regsvr32 with HTTP argument
+Runs remote execution tool
+Runs remote powershell command
+Runs rundll32 with javascript arguments
+Runs scripting engine
+Runs service control tool
+Runs tasks management tool
+Runs WMI scripting engine
+Runs XCOPY.EXE
+Same certificate friendly name as blacklisted
+Same certificate friendly name as graylisted
+Same PE compile date as blacklisted module
+Same service name as blacklisted
+Same service name as graylisted
+Same task name as blacklisted
+Same task name as graylisted
+Schedules remote task
+Screensaver uncommon startup method
+Self delete
+Self signed
+Services executes command shell
+Services in program data
+Signed by signer present once in environment
+Starts remote service
+Stops security service
+Suspect thread
+Suspect thread & Floating module
+Suspect thread & Hooking
+Suspect thread & Network access
+Suspicious AutoStart profile #1
+Suspicious AutoStart profile #2
+Suspicious AutoStart profile #3
+Suspicious AutoStart profile #4
+Suspicious AutoStart profile #5
+Suspicious AutoStart profile #6
+Suspicious CMD.EXE task
+Suspicious REGSVR32.EXE task
+Suspicious service running CMD.EXE
+Suspicious services registry entry
+Suspicious SVCHOST running
+Task manager disabled
+Tasks in program data
+Transfers file using BITS
+Unassigned floating code
+Uncommon executable extension
+Uncommon screensaver
+Unsigned
+Unsigned company present once in environment
+Unsigned copy itself
+Unsigned copy itself autorun
+Unsigned create process on SVCHOST.EXE
+Unsigned creates remote thread
+Unsigned creates remote thread & file hidden
+Unsigned creates remote thread & runs command shell
+Unsigned driver
+Unsigned opens browser process
+Unsigned opens OS process
+Unsigned opens physical drive
+Unsigned opens process
+Unsigned reserved name
+Unsigned reserved name & Hidden
+Unsigned run key present once in environment
+Unsigned run key present once in environment & Created in last month
+Unsigned run key present once in environment & File hidden
+Unsigned section name present once in environment
+Unsigned service name present once in environment
+Unsigned task name present once in environment
+Unsigned writes executable
+Unsigned writes executable and create process on same file
+Unsigned writes executable to AppDataLocal directory
+Unsigned writes executable to AppDataRoaming directory
+Unsigned writes executable to drive root
+Unsigned writes executable to important Windows directory
+Unsigned writes executable to startup directory
+Unsigned writes executable to UNC
+Unsigned writes executable to users directory
+Unsigned writes executable to Windows directory
+User Account Controls (UAC) disabled
+Warning on post redirect disabled
+Windows update notification disabled
+Wmiprvse runs powershell
+Writable code section
+Written by blacklisted module
+Written by graylisted module
+Written by IIS worker process
+Written by monitored application
+A service account was detected logging in interactively
+A system is being targeted by 5 or more distinct high severity IDS signatures Clone
+Abnormal Port Activity From Internal IP
+Abnormal Sensitive Group Modification
+Access : Cleartext Password At Rest
+Access : Default Account Usage
+Access : Default Accounts At Rest
+Access : Inactive Account Usage
+Access : Insecure Or Cleartext Authentication
+Activity Observed from User "sccmmgmt"
+Activity Observed from User "sccmmgmt" 12 Hour
+APT Domain Detected
+APT Hash Detected
+APT IP Detected
+Attack detected on AV and blocked.
+Attack/Infection Detected from Internal System
+Attempt to contact Crypto mining pool (WINSEC) Clone
+Attempt to contact Crypto mining pool Clone
+Audit :  Anomalous Audit Trail Activity Detected
+Automated scanners detected
+Azure - Security Attack Detected
+Azure - SSH RSA Public Key Detected in Logs
+Azure : Changes Detected in NSG Security Rules
+Azure : Eventhub Authorization Rules Change Detected
+Azure : EventHub Deleted
+Azure : Inbound NAT Rule Created in Load Balancer
+Azure : Load Balancer Deleted
+Azure : SQL Server Firewall Rules Updated
+Bash history based rootkit attempt hunting Clone
+Brute force attempt detected - source is trying to guess usernames Clone
+Clear backup history with wbadmin
+Coin Miner IoC
+Coin Mining IOC : Domains
+Completely Inactive Account
+Connection from Suspicious Process Detected and Blocked by AV
+Crypto events Detected
+Destination_IP_monitoring
+Destination_IP_Monitoring_Datamodel
+Destination_IP_Monitoring_Datamodel_II
+Detect changes to Windows Firewall exception list
+Detect successful authentications from sources that have tried to brute force Clone
+Detect Windows object deletions by new admins
+Directory traversal attempts
+Email Spoofing Detected
+Endpoint : Anomalous New Processes
+Endpoint : Anomalous New Services
+Endpoint : Outbreak Observed
+Endpoint : Prohibited Process Detection
+Endpoint : Prohibited Service Detection
+Endpoint : Recurring Malware Infection
+Endpoint : Should Timesync Host Not Syncing
+Errors detected in Oracle DB
+Execution of Mimikatz detected
+Explicit Login using the same credentials to multiple devices
+Explicit logon attempt to crown jewel system
+Firewall Policy Changes Detected
+Fortigate IPS Allowed Attack
+Geographically Imporable Email Access within a Day
+Hits to ThreatConnect threat intelligence URL indicators
+Inbound Threat IP Communication
+Internal to external traffic over SMB ports
+Internal to internal traffic over SMB ports
+Large Outbound Bytes Transfer
+Linux - High CPU Utilization
+Linux - Low Disk Space
+Logon Failures on Multiple Firewall Administrator
+Logs not Observed from a Device
+Malware - Word or Excel processes with execution of a scripting engine
+Malware detected by AV and deleted
+Malware/Attacks Detected on EPO
+Monitor for Registry Changes Detected
+Multiple failed attempts to su in linux
+Multiple Login Failures on VPN
+Multiple Logon Failures on Firewall Admin Portal
+Multiple SAP User Account from Single Terminal
+Multiple SAP User Logon Failure
+Network - Network Device Rebooted - Rule
+Network - Policy Or Configuration Change - Rule
+Network - Vulnerability Scanner Detection (by targets) - Rule
+Network Intrusion Attack Detected
+Network Intrusion Detection
+Network Traffic - Possible DNS exfiltration
+New MailBox User Account
+New Service Installs Detected
+New Task Schedule Created
+Non-owner access permission to user mailbox
+Non-Owner Folder/Object Access Permission
+Non-Owner MailBox Permission
+Outbound Threat IP Communication
+Password Detected in Username
+Phishing : Email Domain Typo Squatting
+Port Scan Detected
+Possible bad attachments being sent to multiple users
+Possible Cross site scripting attack
+Possible mail spoofing with malicious attachment
+Possible SSH Brute-force or scanning observed
+Possible weaponized Office Document - Word or Excel processes spawning a common scripting process
+Potential Account Hijack - 6 or More Login Failures Followed by Successful Login
+Potential account takeover - honeypot credentials used on the network
+Potential Attempt to get the Golden Ticket
+Potential Bruteforce in Windows Envirnment
+Potential Data Leakage via Mail
+Potential Host Sweep Attack Detected
+Potential SQL Injection attack
+Potential System Exploitation
+Potential Unauthorized Email Account Access
+Potential Windows firewall tempering or crash on a system
+Powershell - Someone Using Base64 Encoded Commands Clone
+PowerShell bypass attempts
+SAP - Critical/Warning Transactions Observed
+SAP - Initiation Query Detected from Non-Olam Email
+SAP : Field content changed:
+SAP : Jump to ABAP Debugger Detected
+SAP : Privilege  Account Logon
+SAP : Transaction Unlocked
+SAP MASTER CHANGE : Account Deleted
+SAP MASTER CHANGE : Account Locked
+SAP MASTER CHANGE : Account Unlocked
+SAP MASTER CHANGE : New Account Created
+SAP MASTER CHANGE : User master record was changed.
+SAP Server Stopped
+SAP User locked after erroneous  password checks
+Single SAP User logged in from Multiple Terminal
+Squiblydoo script bypass execution by process execution
+Statistically significant spike in the number of distinct systems a user is logging into
+Sudo based rootkit attempt hunting
+Suspicious certutil usage
+Suspicious certutil usage (SYSMON)
+Suspicious service being stopped
+Suspicious shell execution from web server process
+Suspicious Windows registry activity originating from process running out of AppData
+Suspicious/Administrative Processes Detected
+Syslog Device Health - Logs not Observed
+System processes executing outside of normal windows environment (Sysmon)
+Targeted port scan detected with successful connections
+Threat Detected but not handled.
+Unaction Threat Detected
+Use of netsh to dump passwords in the clear
+Use of vssadmin to delete shadow copies
+User Account Creation
+Windows - Silver Ticket Attack Detected
+Windows -Kerberos Golden Ticket Attack Detected
+WSF/JSE/JS/VBA/VBE File Execution
+Scheduled Task Creation
+Multiple Failed Logins with Different Accounts from Single Source System
+Suspicious PowerShell Invocations - Specific
+NotPetya Ransomware Activity
+Account Tampering - Suspicious Failed Logon Reasons
+YiSpecter Malware Detection.
+Taskmgr as LOCAL_SYSTEM
+OrangeWorm C2 Communication
+Admin User Remote Logon
+Ps.exe Renamed SysInternals Tool
+Suspicious Svchost Process
+Equation Group C2 Communication
+Suspicious Log Entries
+QuarksPwDump Dump File
+Download from Suspicious Dyndns Hosts
+APT User Agent
+DHCP Callout DLL installation
+DualToy Trojan Detection.
+Webshell Detection by Keyword
+Office Macro Starts Cmd
+Pandemic Registry Key
+PowerShell Downgrade Attack
+WMI Persistence
+WMIExec VBS Script
+Suspicious Certutil Command
+Execution in Webserver Root Folder
+Multiple Failed Logins with Different Accounts from Single Source System
+Suspicious WMI execution
+Microsoft Malware Protection Engine Crash
+Suspicious Kerberos RC4 Ticket Encryption
+PowerShell called from an Executable Version Mismatch
+InvisiMole SpyWare Detector.
+Suspicious PowerShell Download
+SAM Dump to AppData
+Executables Started in Suspicious Folder
+Shellshock Expression
+Suspicious TSCON Start
+HIDDEN COBRA RAT/Worm.
+Interactive Logon to Server Systems
+klist purge
+Regsvr32 Anomaly
+Spring framework exceptions
+Detects Suspicious Commands on Linux systems
+smbexec.py Service Installation
+Exploit for CVE-2017-0261
+Relevant ClamAV Message
+Python SQL Exceptions
+Download from Suspicious TLD
+New RUN Key Pointing to Suspicious Folder
+FlawedAmmyy RAT Detection (Hashes).
+DNS Server Error Failed Loading the ServerLevelPluginDLL
+Suspicious VSFTPD Error Messages
+Pass the Hash Activity
+Turla Group Named Pipes
+Suspicious SQL Error Messages
+Program Executions in Suspicious Folders
+UAC Bypass via Event Viewer
+Enabling RDP remotely using PsExec
+Equation Group Indicators
+Ping Hex IP
+Windows PowerShell User Agent
+WMI Persistence - Script Event Consumer File Write
+WScript or CScript Dropper
+Windows PowerShell WebDav User Agent
+Detection MavInject32.exe (Microsoft Corp Signed) execution
+Elise Backdoor
+Shells Spawned by Web Servers
+Suspicious Reconnaissance Activity
+Malware User Agent
+Execution in Non-Executable Folder
+Mimikatz Detection LSASS Access
+Hacktool Use
+WMI Persistence - Command Line Event Consumer
+Malicious PowerShell Commandlets
+Exploit Framework User Agent
+Suspicious User Agent
+StoneDrill Service Install
+Password Dumper Remote Thread in LSASS
+PowerShell Network Connections
+Malicious Service Install
+Download EXE from Suspicious TLD
+Registry Persistence Mechanisms
+Eventlog Cleared
+FlawedAmmyy RAT Detection (Proxy).
+UAC Bypass via sdclt
+Executable used by PlugX in Uncommon Location
+Rare Schtasks Creations
+Rare Service Installs
+Addition of SID History to Active Directory Object
+Suspicious PowerShell Invocations - Generic
+Taskmgr as Parent
+Droppers exploiting CVE-2017-11882
+Exploit for CVE-2017-8759
+Secure Deletion with SDelete
+USB Device Plugged
+Rare Scheduled Task Creations
+Suspicious SSHD Error
+Malicious Service Installations
+Successful Overpass the Hash Attempt
+Multiple suspicious Response Codes caused by Single Client
+DHCP Server Loaded the CallOut DLL
+Lojack Double-Agent Communication
+Executable used by PlugX in Uncommon Location
+Security Eventlog Cleared
+Suspicious Activity in Shell Commands
+MuddyWater APT.
+Password Dumper Activity on LSASS
+Kerberos Manipulation
+Mimikatz In-Memory
+Flash Player Update from Suspicious Location
+Fireball Archer Install
+Exploit for CVE-2015-1641
+StalinLocker Detector.
+Java Running with Remote Debugging
+Detects malware AcroRD32.exe execution process
+Ruby on Rails framework exceptions
+SquiblyTwo
+DiskShadow and Vshadow launch detection
+Suspicious PowerShell Parameter Substring
+Hack Tool User Agent
+PowerShell PSAttack
+ZxShell Malware
+PowerShell Download from URL
+VPNFilter Destructive Malware detection (domain/IP)
+LokiBot Trojan Detector.
+Suspicious Typical Malware Back Connect Ports
+Suspicious Named Error
+Django framework exceptions
+Enabled User Right in AD to Control User Objects
+Apache Segmentation Fault
+Suspicious PowerShell Invocation based on Parent Process
+MSHTA Spawning Windows Shell
+OrangeWorm Kwampirs service installation.
+Rundll32 Internet Connection
+Mimikatz Use
+WannaCry Ransomware via Sysmon
+Suspicious Program Location with Network Connections
+Microsoft Outlook Spawning Windows Shell
+Webshell Detection With Command Line Keywords
+Malware Shellcode in Verclsid Target Process
+System File Execution Location Anomaly
+Eventlog Cleared
+Possible Remote Password Change Through SAMR
+User Added to Local Administrators
+VPNFilter Malware Detector (Hashes).
+PsExec Service Start
+Reconnaissance Activity
+Backup Catalog Deleted
+Sofacy - APT C2 Domain Communication.
+Microsoft Binary Github Communication
+Multiple Modsecurity Blocks
+Buffer Overflow Attempts
+Active Directory User Backdoors
+Suspicious Control Panel DLL Load
+Sticky Key Like Backdoor Usage
+WCE wceaux.dll Access
+Command Line Execution with suspicious URL and AppData Strings
+Malicious PowerShell Commandlets
+Disabling Windows Event Auditing
+Suspicious Driver Load from Temp
+Weak Encryption Enabled and Kerberoast
+Bitsadmin Download
+Windows Shell Spawning Suspicious Program
+Malicious Named Pipe
+Empty User Agent
+PsExec Tool Execution
+Net.exe Execution
+Relevant Anti-Virus Event
+DNS ServerLevelPluginDll Install
+cmdkey Cached Credentials Recon
+Activity Related to NTDS.dit Domain Hash Retrieval
+Locky Ransomware C2/Download/Payment Communication.
+PowerShell Credential Prompt
+DHCP Server Error Failed Loading the CallOut DLL
+Processes created by MMC
+VPNFilter Destructive Malware detection (IP)
+Password Change on Directory Service Restore Mode (DSRM) Account
+List RDP Connections History Unload
+Turla Service Install
+Suspicious PowerShell ZIPing activity
+Microsoft Office Product Spawning Windows Shell
